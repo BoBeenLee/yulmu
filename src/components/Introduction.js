@@ -19,12 +19,14 @@ const Root = styled('div') `
 const Title = styled('div') `
   font-size: 35px;
   font-weight: bold;
+  z-index: 100;
 `;
 
 const Content = styled('div') `
   margin-top: 10px;
   font-size: 20px;
   font-weight: 300;
+  z-index: 100;
 `;
 
 const BackgroundBox = styled('img') `
@@ -38,9 +40,10 @@ class Introduction extends Component {
     static defaultProps = {
     }
     render() {
+        // , { stiffness: 3, damping: 40 }
         return (<Root {...this.props}>
             <BackgroundBox src={Hello} alt="hello" />
-            <Motion defaultStyle={{ opacity: 0 }} style={{ opacity: spring(1, { stiffness: 3, damping: 40 }) }}>
+            <Motion defaultStyle={{ opacity: 0 }} style={{ opacity: spring(1) }}>
                 {interpolatingStyle => (<Fragment>
                     <Title style={interpolatingStyle}>I’m Yuri - OH</Title>
                     <Content style={interpolatingStyle}>I’m having a fun and colorful with user experience design.</Content>

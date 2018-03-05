@@ -4,9 +4,15 @@ import PropTypes from 'prop-types';
 import WorkImage from './images/work4/pidget.gif';
 import PhoneImage from './images/work1/phone1.png';
 
+import WorkRecap from './WorkRecap';
+import { mq } from '../../utils/StyleUtils';
+
 const Root = styled('div') `
-    grid-column: 2;
-    grid-row: 3/5;
+    grid-column: 1;
+    ${ mq.desktop`
+        grid-column: 2;
+        grid-row: 3/5;
+    `}
     display: inline-block;
     color: ${ props => props.theme.secondaryColor};
     background-color: #ac9ce2;
@@ -31,23 +37,23 @@ const Title = styled('div') `
 const Content = styled('div') `
   font-size: 15px;
   font-style: oblique;
+  line-height: 25px;
   margin-bottom: 33px;
 `;
 
-const WorkBox = styled('div') `
-    position: relative;
-    margin: auto 82px;
-`;
-
 const PhoneContentBox = styled('img') `
-    position: absolute;
-    width: 218px;
-    top: 51px;
-    left: 14px;
+    width: 220px;
+    padding-top: 54px;
+    padding-left: 0px;
+    padding-right: 36px;
+    padding-bottom: 83px;
 `;
 
-const PhoneBox = styled('img') `
-    
+const PhoneBox = styled('div') `
+    background-image: url(${PhoneImage});
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
 `;
 
 class Work4 extends Component {
@@ -57,22 +63,14 @@ class Work4 extends Component {
     }
     render() {
         return (<Root {...this.props}>
-            <Recap>
-                <Title>
-                    App game
-                    <Divider />
-                </Title>
-                <Content>
-                    <p>
-                        Team project.<br />
-                        UX UI design, Motion design<br />
-                    </p>
-                </Content>
-            </Recap>
-            <WorkBox>
+            <WorkRecap
+                color="#fff"
+                title="App game"
+                content={`Team project\nGUI design, Interaction design`}
+            />
+            <PhoneBox>
                 <PhoneContentBox src={WorkImage} alt='work' />
-                <PhoneBox src={PhoneImage} alt="phone" />
-            </WorkBox>
+            </PhoneBox>
         </Root>);
     }
 }

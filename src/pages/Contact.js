@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
+import { mq } from '../utils/StyleUtils';
 
 const Root = styled('div') `
     padding-top: 174px;
@@ -17,14 +18,18 @@ const Title = styled('div') `
 const ContactBox = styled('div') `
     margin-top: 18px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    ${ mq.desktop`
+        flex-direction: row;
+    `}
 `;
 
 const ContactItem = styled('div') `
     color: ${props => props.theme.lineColor};
-    padding: 0 15px;
+    padding: 3px 15px;
     font-size: 20px;
     font-weight: 300;
 `;

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { Work1, Work2, Work3, Work4, Work5, WorkIntroduction } from '../components/Work';
 import Introduction from '../components/Introduction';
 import Footer from '../components/Footer';
+import { mq } from '../utils/StyleUtils';
 
 const Root = styled('div') `
     display: flex;
@@ -18,10 +19,14 @@ const IntroBox = styled('div') `
 `;
 
 const WorkBox = styled('div') `
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 30px;
-    grid-row-gap: 36px;
+    grid-template-columns: 1fr;
+    ${ mq.desktop`
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 36px;
+    ` }
 `;
 
 const Divider = styled('div') `

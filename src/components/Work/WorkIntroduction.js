@@ -2,12 +2,18 @@ import React, { Component } from "react";
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 
+import { mq } from '../../utils/StyleUtils';
+
 const Root = styled('p') `
     grid-column: 1;
-    grid-row: 1;
+    ${ mq.desktop`
+        grid-column: 1;
+        grid-row: 1;
+        justify-content: flex-end;
+    `}
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     font-size: 16px;
     line-height: 26px;
 `;

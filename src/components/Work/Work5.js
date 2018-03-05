@@ -5,16 +5,25 @@ import PropTypes from 'prop-types';
 import WorkImage from './images/work5/iot_main.png';
 import WorkVideo from './images/work5/iot_opening.gif';
 import DesktopImage from './images/work5/iot_mac.png';
+import WorkRecap from './WorkRecap';
 import { mq } from '../../utils/StyleUtils';
 
 
 const Root = styled('div') `
-    grid-column: 1/3;
-    grid-row: 5;
+    grid-column: 1;
+    ${ mq.desktop`
+        grid-column: 1/3;
+        grid-row: 5;
+    `}
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    ${ mq.desktop`
+        flex-direction: row;
+    `}
     color: ${ props => props.theme.secondaryColor};
     background-color: #f0a0a0;
+    padding-top: 40px;
+    padding-bottom: 25px;
 `;
 
 const Divider = styled('div') `
@@ -40,20 +49,25 @@ const Content = styled('div') `
 `;
 
 const WorkBox = styled('div') `
-    position: relative;
     margin: auto 82px;
 `;
 
 const DesktopContentBox = styled('img') `
     max-width: 510px;
-    position: absolute;
-    top: 60px;
-    left: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 123px;
 `;
 
-const DesktopBox = styled('img') `
-    padding-top: 40px;
-    padding-bottom: 25px;
+const DesktopBox = styled('div') `
+    background-image: url(${DesktopImage});
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    ${ mq.desktop`
+        margin-left: 84px;
+    `}
 `;
 
 class Work5 extends Component {
@@ -63,21 +77,17 @@ class Work5 extends Component {
     }
     render() {
         return (<Root {...this.props}>
-            <Recap>
-                <Title>
-                    Interactive web design
-                </Title>
-                <Content>
-                    <p>
-                        Team project.<br />
-                        UX UI design, 3d design<br />
-                    </p>
-                </Content>
-            </Recap>
-            <WorkBox>
+            <WorkRecap
+                style={{ paddingTop: 0 }}
+                color="#fff"
+                noDivider
+                title="Interactive web design"
+                content={`Team project\nUX UI design, 3d design`}
+            />
+
+            <DesktopBox>
                 <DesktopContentBox src={WorkVideo} alt="work" />
-                <DesktopBox src={DesktopImage} alt="desktop" />
-            </WorkBox>
+            </DesktopBox>
         </Root>);
     }
 }

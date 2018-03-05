@@ -5,10 +5,16 @@ import PropTypes from 'prop-types';
 import DesktopImage from './images/work2/aroma_mac.png';
 import BackgroundImage from './images/work2/aroma_bg.png';
 
+import WorkRecap from './WorkRecap';
+import { mq } from '../../utils/StyleUtils';
 
-const Root = styled('div') `   
+
+const Root = styled('div') `
     grid-column: 1;
-    grid-row: 4;
+    ${ mq.desktop`
+        grid-column: 1;
+        grid-row: 4;
+    ` }
     position: relative;
     display: inline-block;
     color: ${props => props.theme.primaryColor};
@@ -41,8 +47,11 @@ const Content = styled('div') `
   margin-bottom: 25px;
 `;
 
-const WorkBox = styled('img') `
-    margin: auto 20px;
+const DesktopContentBox = styled('img') `
+`;
+
+const WorkBox = styled('div') `
+    text-align: center;
 `;
 
 
@@ -54,18 +63,14 @@ class Work2 extends Component {
     }
     render() {
         return (<Root {...this.props}>
-            <Recap>
-                <Title>
-                    Web Renewal
-                    <Divider />
-                </Title>
-                <Content>
-                    <p>
-                        Personal Project.
-                    </p>
-                </Content>
-            </Recap>
-            <WorkBox src={DesktopImage} alt="desktop" />
+            <WorkRecap
+                color="#4a4a4a"
+                title="Web Renewal"
+                content={`Personal Project.`}
+            />
+            <WorkBox>
+                <DesktopContentBox src={DesktopImage} alt="desktop" />
+            </WorkBox>
         </Root>);
     }
 }
