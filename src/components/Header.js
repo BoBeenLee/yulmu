@@ -2,18 +2,35 @@ import React, { Component } from "react";
 import styled from 'react-emotion';
 import Headroom from "react-headroom";
 import PropTypes from 'prop-types';
+import { NavLink } from "react-router-dom";
+
 
 const Root = styled('div') `
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    height: 100px;
-    background: #fff;
+    padding-top: 77px;
+    padding-right: 80px;
 `;
 
-const MenuItem = styled('div') `
-    margin-right: 30px;
+const MenuItem = styled(NavLink) `
+    position: relative;
+    color: ${ props => props.theme.primaryColor};
+    text-decoration: none;
+    margin-left: 40px;
+    text-decoration-color: ${ props => props.theme.primaryColor};
+
+    &:hover {
+        /* opacity: 0.6; */
+        /* transition: opacity 0.4s ease-in-out; */
+        text-decoration: line-through;
+    }
+`;
+
+const StrokeBox = styled('div') `
+    height: 2px;
+    background-color: ${ props => props.theme.primaryColor};
 `;
 
 class Header extends Component {
@@ -22,13 +39,15 @@ class Header extends Component {
     static defaultProps = {
     }
     render() {
-        return (<Headroom>
-            <Root>
-                <MenuItem>Portfolio</MenuItem>
-                <MenuItem>Contact</MenuItem>
-            </Root>
-        </Headroom>);
-
+        return (<Root>
+            <MenuItem
+                exact
+                strict
+                activeStyle={{ "textDecoration": 'line-through' }} to="/">Work</MenuItem>
+            <MenuItem
+                strict
+                activeStyle={{ "textDecoration": 'line-through' }} to="/contact">Contact</MenuItem>
+        </Root>);
     }
 }
 
