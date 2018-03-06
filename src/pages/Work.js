@@ -11,7 +11,7 @@ const Root = styled('div') `
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 174px;
+    padding-top: 150px;
 
      ${ mq.desktop`
         padding-top: 213px;

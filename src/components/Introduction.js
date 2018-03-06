@@ -27,6 +27,7 @@ const Content = styled('div') `
   font-size: 20px;
   font-weight: 300;
   z-index: 100;
+  text-align: center;
 `;
 
 const BackgroundBox = styled('img') `
