@@ -11,7 +11,11 @@ const Root = styled('div') `
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 213px;
+    padding-top: 174px;
+
+     ${ mq.desktop`
+        padding-top: 213px;
+     `}
 `;
 
 const IntroBox = styled('div') `
@@ -51,26 +55,26 @@ class Work extends Component {
             <WorkBox>
                 <WorkIntroduction
                     data-aos="fade-up"
-                    data-aos-offset="300"
+                    data-aos-offset="350"
                 />
                 <Work1
                     data-aos="fade-up"
-                    data-aos-offset="300" />
+                    data-aos-offset="350" />
                 <Work2
                     data-aos="fade-up"
-                    data-aos-offset="300"
+                    data-aos-offset="350"
                 />
                 <Work3
                     data-aos="fade-up"
-                    data-aos-offset="300"
+                    data-aos-offset="350"
                 />
                 <Work4
                     data-aos="fade-up"
-                    data-aos-offset="300"
+                    data-aos-offset="350"
                 />
                 <Work5
                     data-aos="fade-up"
-                    data-aos-offset="200"
+                    data-aos-offset="350"
                 />
                 <Divider />
             </WorkBox>
