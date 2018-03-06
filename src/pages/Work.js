@@ -48,12 +48,29 @@ class Work extends Component {
           </Motion> */}
             <Introduction />
             <WorkBox>
-                <WorkIntroduction />
-                <Work1 />
-                <Work2 />
-                <Work3 />
-                <Work4 />
-                <Work5 />
+                <WorkIntroduction
+                    data-aos="fade-up"
+                    data-aos-offset="300"
+                />
+                <Work1
+                    data-aos="fade-up"
+                    data-aos-offset="300" />
+                <Work2
+                    data-aos="fade-up"
+                    data-aos-offset="300"
+                />
+                <Work3
+                    data-aos="fade-up"
+                    data-aos-offset="300"
+                />
+                <Work4
+                    data-aos="fade-up"
+                    data-aos-offset="300"
+                />
+                <Work5
+                    data-aos="fade-up"
+                    data-aos-offset="300"
+                />
                 <Divider />
             </WorkBox>
             <Footer />
