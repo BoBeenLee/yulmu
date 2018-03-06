@@ -22,6 +22,7 @@ const WorkBox = styled('div') `
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
+    grid-row-gap: 10px;
     ${ mq.desktop`
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 30px;
@@ -69,7 +70,7 @@ class Work extends Component {
                 />
                 <Work5
                     data-aos="fade-up"
-                    data-aos-offset="300"
+                    data-aos-offset="200"
                 />
                 <Divider />
             </WorkBox>

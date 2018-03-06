@@ -3,15 +3,20 @@ import styled from 'react-emotion';
 import Headroom from "react-headroom";
 import PropTypes from 'prop-types';
 import { NavLink } from "react-router-dom";
-
+import { mq } from '../utils/StyleUtils';
 
 const Root = styled('div') `
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    padding-top: 77px;
-    padding-right: 80px;
+    padding-top: 20px;
+    padding-right: 30px;
+
+    ${ mq.desktop`
+        padding-top: 77px;
+        padding-right: 80px;
+    ` }
 `;
 
 const MenuItem = styled(NavLink) `
