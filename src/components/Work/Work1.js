@@ -8,6 +8,7 @@ import { mq } from '../../utils/StyleUtils';
 
 const Root = styled('div') `
     grid-column: 1;
+    width: 100%;
     ${ mq.desktop`
         grid-column: 1;
         grid-row: 2/4;

@@ -74,7 +74,8 @@ class App extends Component {
 
 
   _renderHelmet = () => {
-    return <Helmet title="Yulmu"
+    return <Helmet
+      title="Yulmu"
       description="Yulmu" keywords="design" />;
   };
 }

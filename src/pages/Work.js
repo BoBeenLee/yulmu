@@ -48,9 +48,6 @@ class Work extends Component {
     }
     render() {
         return (<Root>
-            {/* <Motion defaultStyle={{ opacity: 0 }} style={{ opacity: spring(1, { stiffness: 1 }) }}>
-            {style => <div style={style}>1</div>}
-          </Motion> */}
             <Introduction />
             <WorkBox>
                 <WorkIntroduction

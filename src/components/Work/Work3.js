@@ -9,6 +9,7 @@ import { mq } from '../../utils/StyleUtils';
 
 const Root = styled('div') `
     grid-column: 1;
+    width: 100%;
     ${ mq.desktop`
         grid-column: 2;
         grid-row: 1/3;
@@ -26,7 +27,7 @@ const WorkBox = styled('img') `
 
 const AsianaBox = styled('img') `
     position: absolute;
-    left: 22px;
+    width: 100%;
     bottom: 95px;
 `;
 
