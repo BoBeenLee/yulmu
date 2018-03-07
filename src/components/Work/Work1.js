@@ -16,8 +16,6 @@ const Root = styled('div') `
     display: inline-block;
     color: ${ props => props.theme.secondaryColor};
     background-color: #c9d2db;
-
-
 `;
 
 const Divider = styled('div') `
