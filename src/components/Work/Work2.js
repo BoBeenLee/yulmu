@@ -20,8 +20,7 @@ const Root = styled('div') `
     display: inline-block;
     color: ${props => props.theme.primaryColor};
     background-image: url(${BackgroundImage});
-    background-size: contain;
-
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: #c5dfce;
 `;
