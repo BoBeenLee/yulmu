@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
+import Thank from './images/thanks.png';
 import { mq } from '../utils/StyleUtils';
 
 const Root = styled('div') `
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-top: 174px;
     margin: 0 auto;
 `;
@@ -13,6 +18,7 @@ const Title = styled('div') `
     font-size: 35px;
     font-weight: bold;
     text-align: center;
+    z-index: 10;
 `;
 
 const ContactBox = styled('div') `
@@ -21,6 +27,7 @@ const ContactBox = styled('div') `
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 
     ${ mq.desktop`
         flex-direction: row;
@@ -34,6 +41,12 @@ const ContactItem = styled('div') `
     font-weight: 300;
 `;
 
+const BackgroundBox = styled('img') `
+    position: absolute;
+    width: 100%;
+    max-width: 882px;
+`;
+
 class Contact extends Component {
     static propTypes = {
     }
@@ -41,6 +54,7 @@ class Contact extends Component {
     }
     render() {
         return (<Root>
+            <BackgroundBox src={Thank} alt="thank" />
             <Title>Contact /</Title>
             <ContactBox>
                 <ContactItem>mobile: 010-4145-6425</ContactItem>

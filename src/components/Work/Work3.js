@@ -37,12 +37,13 @@ class Work3 extends Component {
     }
     static defaultProps = {
     }
+
     render() {
         return (<Root {...this.props}>
             <WorkRecap
                 color="#848484"
-                title="App game"
-                content={`Team project\nUX UI design, Motion design`}
+                title="AVOD Renewal"
+                content={`Team Project.\nUX UI design, GUI design`}
             />
             <AsianaBox src={AsianaImage} alt="work1" />
             <WorkBox width="381" src={WorkImage} alt="work" />

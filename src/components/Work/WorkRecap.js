@@ -8,6 +8,11 @@ const Root = styled('div') `
     padding-left: 10px;
     color: ${ props => props.color};
 
+    /* &:hover {
+        animation: fade-In 0.6s ease-out;
+        transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: scale3D(1.00, 1.20, 1);
+    } */
     ${ mq.desktop`
         padding-top: 36px;
         padding-left: 38px;
