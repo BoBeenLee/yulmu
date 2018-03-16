@@ -10,7 +10,7 @@ const Root = styled('div') `
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 174px;
+    padding-top: 250px;
     margin: 0 auto;
 `;
 
@@ -20,7 +20,6 @@ const Title = styled('div') `
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
-    z-index: 10;
 `;
 
 const ContactBox = styled('div') `
@@ -29,7 +28,6 @@ const ContactBox = styled('div') `
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 10;
 
     ${ mq.desktop`
         flex-direction: row;
@@ -58,7 +56,7 @@ class Contact extends Component {
         return (<Root>
             <BackgroundBox src={Thank} alt="thank" />
             <Motion defaultStyle={{ opacity: 0 }} style={{ opacity: spring(1, { stiffness: 4, damping: 15 }) }}>
-                {interpolatingStyle => <div style={interpolatingStyle}>
+                {interpolatingStyle => <div style={{ zIndex: 10, ...interpolatingStyle }}>
                     <Title>Contact /</Title>
                     <ContactBox>
                         <ContactItem>mobile: 010-4145-6425</ContactItem>
