@@ -44,7 +44,7 @@ const ContactItem = styled('div') `
 const BackgroundBox = styled('img') `
     position: absolute;
     width: 100%;
-    max-width: 882px;
+    max-width: 650px;
 `;
 
 class Contact extends Component {

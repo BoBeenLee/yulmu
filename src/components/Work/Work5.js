@@ -55,7 +55,7 @@ const WorkBox = styled('div') `
 
 const DesktopContentBox = styled('img') `
     max-width: 510px;
-    padding-top: 20px;
+    padding-top: 18px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 123px;
