@@ -24,6 +24,7 @@ const Root = styled('a') `
     background-repeat: no-repeat;
     background-color: #c5dfce;
     text-decoration: none;
+    height: 470px;
 `;
 
 const Divider = styled('div') `
@@ -70,7 +71,7 @@ class Work2 extends Component {
                 content={`Personal Project.`}
             />
             <WorkBox>
-                <DesktopContentBox width="411" src={DesktopImage} alt="desktop" />
+                <DesktopContentBox width="530" src={DesktopImage} alt="desktop" />
             </WorkBox>
         </Root>);
     }

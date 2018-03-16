@@ -60,11 +60,11 @@ const DesktopContentBox = styled('img') `
     padding-right: 20px;
     padding-bottom: 123px;
     cursor: pointer;
-    &:hover {
+    /* &:hover {
         animation: fade-In 0.6s ease-out;
         transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
         transform: scale3D(1.04, 1.04, 1);
-    }
+    } */
 `;
 
 const DesktopBox = styled('div') `
