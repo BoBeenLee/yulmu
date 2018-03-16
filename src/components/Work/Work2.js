@@ -68,7 +68,7 @@ class Work2 extends Component {
             <WorkRecap
                 color="#4a4a4a"
                 title="Web Renewal"
-                content={`Personal Project.`}
+                content={`Personal Project.\nUX UI design, GUI design`}
             />
             <WorkBox>
                 <DesktopContentBox width="530" src={DesktopImage} alt="desktop" />

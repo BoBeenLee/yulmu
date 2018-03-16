@@ -15,7 +15,6 @@ const Root = styled('div') `
 `;
 
 const Title = styled('div') `
-    color: ${props => props.theme.primaryColor};
     font-size: 35px;
     font-weight: bold;
     text-align: center;
@@ -23,7 +22,7 @@ const Title = styled('div') `
 `;
 
 const ContactBox = styled('div') `
-    margin-top: 18px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +34,6 @@ const ContactBox = styled('div') `
 `;
 
 const ContactItem = styled('div') `
-    color: ${props => props.theme.lineColor};
     padding: 3px 15px;
     font-size: 20px;
     font-weight: 300;
