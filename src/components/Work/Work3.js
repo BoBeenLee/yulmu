@@ -41,7 +41,7 @@ class Work3 extends Component {
     }
 
     render() {
-        return (<Root {...this.props} href="/pdf/asiana.pdf" target="_blank">
+        return (<Root {...this.props} href="https://drive.google.com/open?id=1_RJJNLFecjgeGrgsm1C3kDw2pEfQIBQv" target="_blank">
             <WorkRecap
                 color="#848484"
                 title="AVOD Renewal"
