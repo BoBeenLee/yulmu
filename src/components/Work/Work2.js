@@ -64,7 +64,7 @@ class Work2 extends Component {
     static defaultProps = {
     }
     render() {
-        return (<Root {...this.props} href="https://drive.google.com/open?id=1zb2EOQ0rP3rklsBnU7z7Gumt7-867CAo" target="_blank">
+        return (<Root {...this.props} href="https://drive.google.com/open?id=1tVlNHcNTR9UlzzTysFY7qSIH1j3unrm6" target="_blank">
             <WorkRecap
                 color="#4a4a4a"
                 title="Web Renewal"
