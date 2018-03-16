@@ -5,6 +5,7 @@ import WorkImage from './images/work1/work1.gif';
 import PhoneImage from './images/work1/phone1.png';
 import WorkRecap from './WorkRecap';
 import { mq } from '../../utils/StyleUtils';
+import urls from '../../constants/urls';
 
 const Root = styled('a') `
     grid-column: 1;
@@ -62,7 +63,7 @@ class Work1 extends Component {
     static defaultProps = {
     }
     render() {
-        return (<Root {...this.props} href="https://drive.google.com/open?id=1IpBPlsVddgxdhu6NPuYdEzfbfxVAn8kX" target="_blank">
+        return (<Root {...this.props} href={urls.y2048} target="_blank">
             <WorkRecap
                 color="#fff"
                 title="App game"

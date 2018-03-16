@@ -6,6 +6,7 @@ import DesktopImage from './images/work2/aroma_mac.png';
 import BackgroundImage from './images/work2/aroma_bg.png';
 
 import WorkRecap from './WorkRecap';
+import urls from '../../constants/urls';
 import { mq } from '../../utils/StyleUtils';
 
 
@@ -64,7 +65,7 @@ class Work2 extends Component {
     static defaultProps = {
     }
     render() {
-        return (<Root {...this.props} href="https://drive.google.com/open?id=1tVlNHcNTR9UlzzTysFY7qSIH1j3unrm6" target="_blank">
+        return (<Root {...this.props} href={urls.aroma} target="_blank">
             <WorkRecap
                 color="#4a4a4a"
                 title="Web Renewal"

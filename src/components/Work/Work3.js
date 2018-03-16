@@ -6,6 +6,7 @@ import WorkImage from './images/work3/asiana_bg.png';
 
 import WorkRecap from './WorkRecap';
 import { mq } from '../../utils/StyleUtils';
+import urls from '../../constants/urls';
 
 const Root = styled('a') `
     grid-column: 1;
@@ -41,7 +42,7 @@ class Work3 extends Component {
     }
 
     render() {
-        return (<Root {...this.props} href="https://drive.google.com/open?id=1_RJJNLFecjgeGrgsm1C3kDw2pEfQIBQv" target="_blank">
+        return (<Root {...this.props} href={urls.asiana} target="_blank">
             <WorkRecap
                 color="#848484"
                 title="AVOD Renewal"
