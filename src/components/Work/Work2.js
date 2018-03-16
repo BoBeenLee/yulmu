@@ -63,7 +63,7 @@ class Work2 extends Component {
     static defaultProps = {
     }
     render() {
-        return (<Root {...this.props} href="/pdf/aroma.pdf">
+        return (<Root {...this.props} href="/pdf/aroma.pdf" target="_blank">
             <WorkRecap
                 color="#4a4a4a"
                 title="Web Renewal"

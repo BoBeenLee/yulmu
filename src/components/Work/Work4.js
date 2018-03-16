@@ -64,7 +64,7 @@ class Work4 extends Component {
     static defaultProps = {
     }
     render() {
-        return (<Root {...this.props} href="/pdf/pidget.pdf">
+        return (<Root {...this.props} href="/pdf/pidget.pdf" target="_blank">
             <WorkRecap
                 color="#fff"
                 title="App game"
