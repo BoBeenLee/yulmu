@@ -69,7 +69,7 @@ class Work2 extends Component {
                 content={`Personal Project.`}
             />
             <WorkBox>
-                <DesktopContentBox src={DesktopImage} alt="desktop" />
+                <DesktopContentBox width="411" src={DesktopImage} alt="desktop" />
             </WorkBox>
         </Root>);
     }

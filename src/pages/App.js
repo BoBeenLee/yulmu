@@ -52,7 +52,6 @@ class App extends Component {
           <Root>
             {this._renderHelmet()}
             <Header />
-
             <Content>
               <AnimatedRoute
                 atEnter={{ opacity: 0, }}

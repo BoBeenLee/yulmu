@@ -28,7 +28,8 @@ const WorkBox = styled('img') `
 const AsianaBox = styled('img') `
     position: absolute;
     width: 100%;
-    bottom: 95px;
+    bottom: -20px;
+    left: 65px;
 `;
 
 class Work3 extends Component {
@@ -44,7 +45,7 @@ class Work3 extends Component {
                 content={`Team project\nUX UI design, Motion design`}
             />
             <AsianaBox src={AsianaImage} alt="work1" />
-            <WorkBox src={WorkImage} alt="work" />
+            <WorkBox width="381" src={WorkImage} alt="work" />
         </Root>);
     }
 }

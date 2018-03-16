@@ -44,7 +44,7 @@ class Introduction extends Component {
         // , { stiffness: 3, damping: 40 }
         return (<Root {...this.props}>
             <BackgroundBox src={Hello} alt="hello" />
-            <Motion defaultStyle={{ opacity: 0 }} style={{ opacity: spring(1, { stiffness: 4, damping: 40 }) }}>
+            <Motion defaultStyle={{ opacity: 0 }} style={{ opacity: spring(1, { stiffness: 4, damping: 100 }) }}>
                 {interpolatingStyle => (<Fragment>
                     <Title style={interpolatingStyle}>I’m Yuri - OH</Title>
                     <Content style={interpolatingStyle}>I’m having a fun and colorful with user experience design.</Content>
