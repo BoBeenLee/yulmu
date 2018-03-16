@@ -7,7 +7,7 @@ import PhoneImage from './images/work1/phone1.png';
 import WorkRecap from './WorkRecap';
 import { mq } from '../../utils/StyleUtils';
 
-const Root = styled('div') `
+const Root = styled('a') `
     grid-column: 1;
     width: 100%;
     ${ mq.desktop`
@@ -17,6 +17,7 @@ const Root = styled('div') `
     display: inline-block;
     color: ${ props => props.theme.secondaryColor};
     background-color: #ac9ce2;
+    text-decoration: none;
 `;
 
 const Divider = styled('div') `
@@ -63,7 +64,7 @@ class Work4 extends Component {
     static defaultProps = {
     }
     render() {
-        return (<Root {...this.props}>
+        return (<Root {...this.props} href="/pdf/pidget.pdf">
             <WorkRecap
                 color="#fff"
                 title="App game"

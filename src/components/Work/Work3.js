@@ -7,7 +7,7 @@ import WorkImage from './images/work3/asiana_bg.png';
 import WorkRecap from './WorkRecap';
 import { mq } from '../../utils/StyleUtils';
 
-const Root = styled('div') `
+const Root = styled('a') `
     grid-column: 1;
     width: 100%;
     ${ mq.desktop`
@@ -19,6 +19,7 @@ const Root = styled('div') `
     /* max-width: 411px; */
     color: #848484;
     background-color: #f5f2ed;
+    text-decoration: none;
 `;
 
 const WorkBox = styled('img') `
@@ -27,9 +28,10 @@ const WorkBox = styled('img') `
 
 const AsianaBox = styled('img') `
     position: absolute;
+    bottom: 5px;
+    left: -40px;
+    min-width: 680px;
     width: 100%;
-    bottom: -20px;
-    left: 65px;
 `;
 
 class Work3 extends Component {
@@ -39,7 +41,7 @@ class Work3 extends Component {
     }
 
     render() {
-        return (<Root {...this.props}>
+        return (<Root {...this.props} href="/pdf/asiana.pdf">
             <WorkRecap
                 color="#848484"
                 title="AVOD Renewal"

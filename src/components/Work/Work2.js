@@ -9,7 +9,7 @@ import WorkRecap from './WorkRecap';
 import { mq } from '../../utils/StyleUtils';
 
 
-const Root = styled('div') `
+const Root = styled('a') `
     grid-column: 1;
     width: 100%;
     ${ mq.desktop`
@@ -23,6 +23,7 @@ const Root = styled('div') `
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #c5dfce;
+    text-decoration: none;
 `;
 
 const Divider = styled('div') `
@@ -62,7 +63,7 @@ class Work2 extends Component {
     static defaultProps = {
     }
     render() {
-        return (<Root {...this.props}>
+        return (<Root {...this.props} href="/pdf/aroma.pdf">
             <WorkRecap
                 color="#4a4a4a"
                 title="Web Renewal"

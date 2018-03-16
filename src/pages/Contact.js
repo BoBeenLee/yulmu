@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from 'react-emotion';
+import { Motion, spring } from 'react-motion';
 import PropTypes from 'prop-types';
 import Thank from './images/thanks.png';
 import { mq } from '../utils/StyleUtils';
@@ -18,6 +19,7 @@ const Title = styled('div') `
     font-size: 35px;
     font-weight: bold;
     text-align: center;
+    margin-top: 20px;
     z-index: 10;
 `;
 
@@ -55,11 +57,14 @@ class Contact extends Component {
     render() {
         return (<Root>
             <BackgroundBox src={Thank} alt="thank" />
-            <Title>Contact /</Title>
-            <ContactBox>
-                <ContactItem>mobile: 010-4145-6425</ContactItem>
-                <ContactItem>mail: yulmu0923@naver.com</ContactItem>
-            </ContactBox>
+            <Motion defaultStyle={{ opacity: 0 }} style={{ opacity: spring(1, { stiffness: 4, damping: 15 }) }}>
+                {interpolatingStyle => <div style={interpolatingStyle}>
+                    <Title>Contact /</Title>
+                    <ContactBox>
+                        <ContactItem>mobile: 010-4145-6425</ContactItem>
+                        <ContactItem>mail: yulmu0923@naver.com</ContactItem>
+                    </ContactBox> </div>}
+            </Motion>
         </Root>);
     }
 }
